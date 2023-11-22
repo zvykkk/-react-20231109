@@ -1,12 +1,12 @@
 import React from  "react";
 
-import {RestaurantTab} from "../restaurant-tab/component"
+import {Tab} from "../tab/component"
 
-export const RestaurantTabs = ({names}) => {
+export const RestaurantTabs = ({restaurants, onTabClick}) => {
     return (
         <div>
-            {names.map((name) => (
-                <RestaurantTab name = {name}/>
+            {restaurants.map((restaurant) => (
+                <Tab onClick={ () => onTabClick(restaurant.name)} name = {restaurant.name}/>
             ))}
         </div>
     );

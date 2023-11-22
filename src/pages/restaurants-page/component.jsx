@@ -1,14 +1,21 @@
-import React from  "react";
+import React, {useState} from "react";
 
 import {RestaurantTabs} from "../../components/restaurant-tabes/component";
 import {Restaurants} from "../../components/restaurants/component";
 
 export const RestaurantsPage = ({restaurants}) => {
 
-    const names = Array.from(new Set(restaurants.map(({ name }) => name)));
+    const [selectedRestaurantTab, setSelectedRestaurantTab] = useState();
+
+    const filteredRestaurants = restaurants.filter(
+        ({name}) => name === selectedRestaurantTab
+    );
 
     return <div>
-        <RestaurantTabs names = {names}/>
-        <Restaurants restaurants = {restaurants}/>
+        <RestaurantTabs
+            restaurants = {restaurants}
+            onTabClick={setSelectedRestaurantTab}
+        />
+        <Restaurants restaurants = {filteredRestaurants}/>
     </div>;
 };
