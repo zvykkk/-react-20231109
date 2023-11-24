@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {Counter} from "../counter/component";
 
 export const Dish = ({dish}) => {
-    const [numberDishes, setNumberDishes] = useState(0);
+    const [amount, setAmount] = useState(0);
 
     if (!dish) {
         return null;
@@ -12,9 +12,9 @@ export const Dish = ({dish}) => {
         <div>
             <li>{dish.name}</li>
             <Counter
-                number={numberDishes}
-                increment={() => numberDishes < 5 && setNumberDishes(numberDishes + 1)}
-                decrement={() => numberDishes && setNumberDishes(numberDishes - 1)}
+                value={amount}
+                increment={() => setAmount(amount + 1)}
+                decrement={() => setAmount(amount - 1)}
             />
         </div>
         );

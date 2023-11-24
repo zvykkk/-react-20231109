@@ -1,21 +1,21 @@
 import React, {useState} from "react";
 
 import {RestaurantTabs} from "../../components/restaurant-tabes/component";
-import {Restaurants} from "../../components/restaurants/component";
+import {Restaurant} from "../../components/restaurant/component";
 
 export const RestaurantsPage = ({restaurants}) => {
 
-    const [selectedRestaurantTab, setSelectedRestaurantTab] = useState();
+    const [activeRestaurantId, setActiveRestaurantId] = useState(0);
 
-    const filteredRestaurants = restaurants.filter(
-        ({name}) => name === selectedRestaurantTab
+    const activeRestaurant = restaurants.find(
+        ({id}) => id === activeRestaurantId
     );
 
     return <div>
         <RestaurantTabs
             restaurants = {restaurants}
-            onTabClick={setSelectedRestaurantTab}
+            onTabClick={setActiveRestaurantId}
         />
-        <Restaurants restaurants = {filteredRestaurants}/>
+        {activeRestaurant && <Restaurant restaurant={activeRestaurant}/>}
     </div>;
 };
