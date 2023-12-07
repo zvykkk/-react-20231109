@@ -1,0 +1,13 @@
+.root {
+    display: flex;
+    flex-direction: row;
+    font-size: 22px;
+    line-height: 18px;
+    color: #2b2828;
+    padding: 10px;
+}
+
+.counter {
+    margin-left: 50px;
+}
+
