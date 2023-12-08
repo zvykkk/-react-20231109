@@ -1,4 +1,16 @@
 .root {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     height: 40px;
     background-color: #312f30;
+}
+
+.contacts {
+    font-size: 15px;
+    font-weight: 600;
+    color: #a79b9b;
+    background-color: #5f5c5e;
+    border-radius: 4px;
+    padding: 10px 25px;
 }
