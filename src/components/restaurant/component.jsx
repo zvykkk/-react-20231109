@@ -1,9 +1,8 @@
 import React, {useState} from "react";
-
-import {Menu} from "../menu/component";
-import {Reviews} from "../reviews/component";
 import {ReviewForm} from "../review-form/component";
 import styles from "./styles.module.css"
+import {MenuContainer} from "../menu/container";
+import {ReviewsContainer} from "../reviews/container";
 
 export const Restaurant = ({restaurant}) => {
     if (!restaurant){
@@ -14,8 +13,8 @@ export const Restaurant = ({restaurant}) => {
 
     return <div className={styles.root}>
         <h2 className={styles.title}>{name}</h2>
-        <Menu dishes = {menu} className={styles.menu}/>
-        <Reviews reviews = {reviews} className={styles.reviews}/>
+        <MenuContainer restaurantId={restaurant.id} className={styles.menu}/>
+        <ReviewsContainer restaurantId={restaurant.id} className={styles.reviews}/>
         <ReviewForm className={styles.reviewForm}/>
     </div>
 };

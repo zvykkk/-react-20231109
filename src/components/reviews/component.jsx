@@ -1,9 +1,9 @@
 import React from  "react";
-import {Review} from "../review/component";
 import classNames from "classnames";
 import styles from './styles.module.css'
+import {ReviewContainer} from "../review/container";
 
-export const Reviews = ({reviews, className}) => {
+export const Reviews = ({reviewIds, className}) => {
     return (
         <div className={classNames(
             styles.root,
@@ -11,7 +11,7 @@ export const Reviews = ({reviews, className}) => {
         )}>
             <h3 className={styles.title}>Reviews</h3>
             <div>
-                {reviews.map((review) => <Review text={review.text} className={styles.review}/>)}
+                {reviewIds.map((id) => <ReviewContainer reviewId={id} className={styles.review}/>)}
             </div>
         </div>
     );

@@ -1,9 +1,9 @@
 import React from  "react";
-import {Dish} from "../dish/component";
 import styles from "./styles.module.css"
 import classNames from "classnames";
+import {DishContainer} from "../dish/container";
 
-export const Menu = ({dishes, className}) => {
+export const Menu = ({dishIds, className}) => {
     return (
         <div className={classNames(
             styles.root,
@@ -11,8 +11,8 @@ export const Menu = ({dishes, className}) => {
         )}>
             <h3 className={styles.title}>Menu</h3>
             <div>
-            {dishes.map((dish) => (
-                <Dish dish={dish} className={styles.dish}/>
+            {dishIds.map((id) => (
+                <DishContainer dishId={id} className={styles.dish}/>
                 ))}
             </div>
         </div>
