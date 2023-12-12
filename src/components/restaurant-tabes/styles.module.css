@@ -3,6 +3,15 @@
     flex-direction: row;
 }
 
-.tab:not(:last-child) {
+.button {
+    position: relative;
+    height: 100%;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 10px 25px;
+}
+
+.button:not(:last-child) {
     margin-right: 10px;
 }
