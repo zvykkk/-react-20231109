@@ -1,27 +1,18 @@
 import React, {useState} from "react";
-
-import {RestaurantTabs} from "../../components/restaurant-tabes/component";
-import {Restaurant} from "../../components/restaurant/component";
-
 import {Layout} from "../../components/layout/component";
-import {OrderFormGroup} from "../../components/order-form-group/component";
+import {RestaurantContainer} from "../../components/restaurant/container";
+import {RestaurantTabsContainer} from "../../components/restaurant-tabes/container";
 
-export const RestaurantsPage = ({restaurants}) => {
+
+export const RestaurantsPage = () => {
 
     const [activeRestaurantId, setActiveRestaurantId] = useState(null);
 
-    const activeRestaurant = restaurants.find(
-        ({id}) => id === activeRestaurantId
-    );
 
     return (
             <Layout>
-            <RestaurantTabs
-            restaurants = {restaurants}
-            onTabClick={setActiveRestaurantId}
-            />
-            {activeRestaurant && <Restaurant restaurant={activeRestaurant}/>}
-            {/*<OrderFormGroup/>*/}
+            <RestaurantTabsContainer onTabClick={setActiveRestaurantId}/>
+            {activeRestaurantId && <RestaurantContainer restaurantId={activeRestaurantId}/>}
             </Layout>
     )
 };
