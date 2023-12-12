@@ -1,0 +1,19 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #cecdcd;
+    padding: 0 35px 25px;
+    background-color: white;
+    border-radius: 13px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #7b7171;
+}
+
+.dish:not(:last-child) {
+    margin-bottom: 15px;
+}

@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import {Menu} from "../menu/component";
 import {Reviews} from "../reviews/component";
 import {ReviewForm} from "../review-form/component";
+import styles from "./styles.module.css"
 
 export const Restaurant = ({restaurant}) => {
     if (!restaurant){
@@ -11,10 +12,10 @@ export const Restaurant = ({restaurant}) => {
 
     const {name, menu, reviews} = restaurant;
 
-    return <div>
-        <h2>{name}</h2>
-        <Menu dishes = {menu}/>
-        <Reviews reviews = {reviews}/>
-        <ReviewForm/>
+    return <div className={styles.root}>
+        <h2 className={styles.title}>{name}</h2>
+        <Menu dishes = {menu} className={styles.menu}/>
+        <Reviews reviews = {reviews} className={styles.reviews}/>
+        <ReviewForm className={styles.reviewForm}/>
     </div>
 };

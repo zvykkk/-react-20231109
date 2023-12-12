@@ -1,0 +1,22 @@
+.root {
+    padding: 25px 0;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #bbabab;
+}
+
+.menu {
+    margin-bottom: 25px;
+}
+
+.reviews {
+    margin-bottom: 25px;
+}
+
+.reviewForm {
+    margin-bottom: 25px;
+}

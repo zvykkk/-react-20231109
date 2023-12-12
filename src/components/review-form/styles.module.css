@@ -1,0 +1,44 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #cecdcd;
+    padding: 0 35px 25px;
+    background-color: white;
+    border-radius: 13px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #7b7171;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.containerElem {
+    width: 33.3333%;
+    padding: 13px 20px 17px 24px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 15px;
+    color: #bbabab;
+}
+
+.input {
+    width: 100%;
+    border: 1px solid #cecdcd;
+    border-radius: 8px;
+    padding: 13px 54px 17px 24px;
+    color: #2b2828;
+}
+
+.input:focus {
+    border: 2px solid #efc2d9;
+}

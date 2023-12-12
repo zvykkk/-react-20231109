@@ -1,0 +1,15 @@
+.root {
+    font-size: 22px;
+    color: #c9a4b7;
+}
+
+.bottom {
+    height: 25px;
+    width: 20px;
+    margin: 0 8px;
+    font-weight: 600;
+    color: #2b2828;
+    background-color: #dcd3d8;
+    border-radius: 4px;
+}
+
