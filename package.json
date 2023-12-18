@@ -7,14 +7,17 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start-server": "node simple_api/server.js"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
     "classnames": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-redux": "^9.0.2"
+    "react-redux": "^9.0.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
